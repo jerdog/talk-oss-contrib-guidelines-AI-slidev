@@ -1,0 +1,26 @@
+{
+  "name": "jerdog-base-talk-slidev",
+  "type": "module",
+  "private": true,
+  "author": "Jeremy Meiss",
+  "license": "MIT",
+  "description": "Base template for talks built with Slidev",
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "latest",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "slidev-component-progress": "latest",
+    "slidev-theme-the-unnamed": "latest",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "playwright-chromium": "latest",
+    "prettier": "latest",
+    "prettier-plugin-slidev": "latest"
+  }
+}
