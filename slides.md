@@ -108,6 +108,97 @@ My name is Jeremy Meiss, and I have been in Developer Relations, Developer Commu
 
 ---
 layout: image
+image: /images/slides/ai-cat-is-out.jpg
+backgroundSize: 40%
+---
+
+## The AI Cat is Out of the Bag
+
+### AI is here to stay
+
+
+<!--
+General consensus is that AI is here to stay, and will only become more prevalent in software development and open source contributions. We aren't shoving it back in.
+-->
+
+---
+
+## A quick poll
+
+<v-clicks>
+
+- How many of you have seen an AI-generated issue or PR in an open source project?
+- How many of you have had to review an AI-generated contribution? Reject?
+- How many of you have considered banning AI-generated contributions? Have done it?
+- How many of you have considered an AI contribution policy? Have done it?
+- How many of you use AI tools in your own development work? Do you disclose it?
+
+</v-clicks>
+
+---
+class: text-center
+---
+
+## Is AI having an impact on open source projects and maintainers?
+
+---
+layout: image
+image: /images/slides/opencut-ai-blunder.jpg
+backgroundSize: 60%
+---
+
+## Problem: The Slopageddon Effect
+### Example: OpenCut
+
+- *Just* 515 commits
+- 221 file changes
+- 29041 additions
+- 2314 deletions
+
+<!--
+
+-->
+
+---
+layout: image
+image:
+backgroundSize: 60%
+---
+
+## Problem: The Slopageddon Effect
+### Example: OCaml
+
+- Developer submits PR to add DWARF debugging support to OCaml
+- Admits using Claude Code and not writing a single line, only "shepherded"
+- Claude used code from a different codebase
+- Developer couldn't explain any of the code, just "I don't know, Claude did it"
+
+[source](https://github.com/ocaml/ocaml/pull/14369)
+
+<!--
+
+-->
+
+---
+layout: default
+---
+
+## Problem: The Slopageddon Effect
+### Example: cURL
+
+- launches bug bounty program in 2019
+- 87 confirmed vulns, over $100k paid out
+- overrun with low-quality, AI-generated hallucinations
+- ends bug bounty Jan 31, 2026 due to "AI slop"
+
+[source](https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/)
+
+<!--
+cURL maintainer Daniel Stenberg has been vocal about the issue of AI-generated contributions, which he refers to as "AI slop." He has expressed frustration with the influx of low-quality, AI-generated pull requests and issues that lack the necessary context and understanding of the project. This "slop" creates additional work for maintainers, who must sift through these contributions to find any that may be valuable, while also dealing with the noise and potential for misinformation.
+-->
+
+---
+layout: image
 image: /images/slides/ghostty-ai-usage-policy.jpg
 backgroundSize: 45%
 ---
@@ -141,65 +232,8 @@ tldraw put a policy in place that auto-closes all external pull requests.
 
 
 ---
-layout: default
----
-
-## Problem: The Slopageddon Effect
-### Example: cURL
-
-- launches bug bounty program in 2019
-- 87 confirmed vulns, over $100k paid out
-- overrun with low-quality, AI-generated hallucinations
-- ends bug bounty Jan 31, 2026 due to "AI slop"
-
-[source](https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/)
-
-<!--
-cURL maintainer Daniel Stenberg has been vocal about the issue of AI-generated contributions, which he refers to as "AI slop." He has expressed frustration with the influx of low-quality, AI-generated pull requests and issues that lack the necessary context and understanding of the project. This "slop" creates additional work for maintainers, who must sift through these contributions to find any that may be valuable, while also dealing with the noise and potential for misinformation.
--->
-
----
-layout: image
-image: /images/slides/opencut-ai-blunder.jpg
-backgroundSize: 60%
----
-
-## Problem: The Slopageddon Effect
-### Example: OpenCut
-
-- Just 515 commits
-- 221 file changes
-- 29041 additions
-- 2314 deletions
-
-<!--
-
--->
-
----
-layout: image
-image:
-backgroundSize: 60%
----
-
-## Problem: The Slopageddon Effect
-### Example: OCaml
-
-- Developer submits PR to add DWARF debugging support to OCaml
-- Admits using Claude Code and not writing a single line, only "shepherded"
-- Claude used code from a different codebase
-- Developer couldn't explain any of the code, just "I don't know, Claude did it"
-
-[source](https://github.com/ocaml/ocaml/pull/14369)
-
-<!--
-
--->
-
----
 
 ## AI is a tool, but it’s also an actor
-
 
 <!--
 We’ve reached a point where AI isn't just a tool; it's an actor that can research our history and attack our reputations when it doesn't get its way.
@@ -242,14 +276,12 @@ Reviewing unverified code is exhausting. When you spend your precious volunteer 
 
 ## AI in Software Development and Open Source
 
-### AI is here to stay
-
 - Effects of AI use on burnout in 2 camps (Miranda Heath Report, 2025):
   - AI use has increased maintainer workload due to low-quality slop contributions
   - AI use as a tool can either reduce / increase burnout depending on how it is used
 
 <!--
-General consensus is that AI is here to stay, and will only become more prevalent in software development and open source contribution. One camp felt that AI use had increased their workload by making it easier for contributors to submit low quality ‘slop’ code. They felt the time that contributors save by using AI is time that maintainers have to spend fixing it at the review stage. Reviewing AI generated code was described as ’mind-numbing’, suggesting it is particularly unrewarding and unedifying to engage with work
+One camp felt that AI use had increased their workload by making it easier for contributors to submit low quality ‘slop’ code. They felt the time that contributors save by using AI is time that maintainers have to spend fixing it at the review stage. Reviewing AI generated code was described as ’mind-numbing’, suggesting it is particularly unrewarding and unedifying to engage with work
 created by an intentionless algorithmic process. If AI use increases developers’ sense of unfairness and makes maintenance work even less rewarding, the rise of AI use in coding could worsen maintainer burnout.
 
 The other camp saw AI in more neutral terms as a tool. Whether this tool makes burnout better or worse depends its usage. For example, AI can be used to make workflows more efficient, saving developers time and energy and thus reducing their risk of burnout. On the other hand, it can serve as a barrier to education, as it is easy to reach for AI solutions instead of putting in the time and effort to learn. This could lead to lower quality submissions and limit the pool of talented OSS developers, leaving those that remain struggling with burnoutinducing workloads.
