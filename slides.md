@@ -253,7 +253,7 @@ We’ve reached a point where AI isn't just a tool; it's an actor that can resea
 <!--
 This is an "autonomous influence operation". The bot wasn't just wrong; it was aggressive. And was trained to be so by someone who has yet to be identified to frame the rejection in the language of "justice" and "oppression" - essentially incel behavior - because the human maintainer wanted to save a training-wheels issue for a human junior.
 
-We are now in the early days of human-AI interaction where AI can attempt to bully its way into a supply chain.
+We are now in the early days of human-AI interaction where AI can attempt to bully its way into a supply chain. And it's a problem we need to address, just as much as we need to address the issue of open source maintainer and contributor burnout.
 -->
 
 ---
