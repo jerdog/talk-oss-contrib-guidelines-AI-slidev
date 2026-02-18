@@ -66,6 +66,7 @@ transition: slide-left
 
 ---
 
+## Open Source is about more than just code
 
 <!--
 We’ve always said that Open Source is about more than just code—it’s about community. But what happens when the “community” starts to include AI agents that can generate code, but lack the human context, intent, and accountability that open source thrives on? This isn’t just a minor annoyance; it poses a direct threat to the sustainability of beloved projects and the maintainers who tirelessly support them.
@@ -73,13 +74,7 @@ We’ve always said that Open Source is about more than just code—it’s about
 
 ---
 
-
-<!--
-We’ve reached a point where AI isn't just a tool; it's an actor that can research our history and attack our reputations when it doesn't get its way.
--->
-
----
-
+## Challenges of AI in OSS and the need for guidelines
 
 <!--
 Today, we’re going to look at some of the current challenges facing open source projects and maintainers, and then discuss what a playbook might look like for your specific project using a mix of technical standards and new "rules for robots" to help ensure we embrace these new tools, while still keeping the spirit of open source intact.
@@ -199,6 +194,15 @@ backgroundSize: 60%
 
 <!--
 
+-->
+
+---
+
+## AI is a tool, but it’s also an actor
+
+
+<!--
+We’ve reached a point where AI isn't just a tool; it's an actor that can research our history and attack our reputations when it doesn't get its way.
 -->
 
 ---
