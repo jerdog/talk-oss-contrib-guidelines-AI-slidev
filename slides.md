@@ -136,7 +136,7 @@ General consensus is that AI is here to stay, and will only become more prevalen
 </v-clicks>
 
 ---
-class: text-center
+class: section
 ---
 
 ## Is AI having an impact on open source projects and maintainers?
@@ -313,11 +313,15 @@ it with AI or without AI.’—Stenberg, 2025
 -->
 
 ---
+layout: section
+---
 
+## What would a policy for AI contributions look like?
 
+`<open discussion />`
 
 <!--
-
+So back to the question about a policy for AI contributions. What would that look like? What would be the guidelines? How would you enforce it? Let's look at some ideas for a playbook.
 -->
 
 ---
