@@ -296,76 +296,164 @@ The other camp saw AI in more neutral terms as a tool. Whether this tool makes b
 1. Means of filtering out and refusing poor quality AI-generated contributions
 2. Improving education on how, and how not, to use AI in collaborative coding
 
-<!--
-Looking at the arguments on both sides of the debate, it seems there are two
-things that can be done to prevent AI use exacerbating maintainer burnout.
-Firstly, by cultivating means of filtering out and refusing poor quality AIgenerated contributions. Secondly, by improving education among contributors
-and developers on how, and how not, to use AI in collaborative coding, such
-that it does not prevent developers learning new skills and can change their
-workflows for the better.
-In sum, AI use could drastically change the experience of being an OSS maintainer, for better or for worse. OSS developers are sounding the alarm, and the
-quicker action is taken, the greater the chance of the rise in AI having a positive,
-rather than a negative, effect on burnout.
+<br />
 
-‘We need to reduce the amount of sand in the machine. We must do something
-to drastically reduce the temptation for users to submit low quality reports. Be
-it with AI or without AI.’—Stenberg, 2025
+> ‘We need to reduce the amount of sand in the machine. We must do something to drastically reduce the temptation for users to submit low quality reports. Be it with AI or without AI.’—Daniel Stenberg, curl maintainer, 2025
+
+<!--
+Looking at the arguments on both sides of the debate, it seems there are two things that can be done to prevent AI use exacerbating maintainer burnout. Firstly, by cultivating means of filtering out and refusing poor quality AIgenerated contributions. Secondly, by improving education among contributors and developers on how, and how not, to use AI in collaborative coding, such that it does not prevent developers learning new skills and can change their workflows for the better.
+
+In sum, AI use could drastically change the experience of being an OSS maintainer, for better or for worse. OSS developers are sounding the alarm, and the quicker action is taken, the greater the chance of the rise in AI having a positive, rather than a negative, effect on burnout.
 -->
 
 ---
-layout: section
+layout: center
 ---
 
 ## What would a policy for AI contributions look like?
 
+- What guidelines would you put in place?
+- How would you enforce it?
+
 `<open discussion />`
 
 <!--
-So back to the question about a policy for AI contributions. What would that look like? What would be the guidelines? How would you enforce it? Let's look at some ideas for a playbook.
+So back to the question about a policy for AI contributions. What would that look like? What would be the guidelines? How would you enforce it?
+
+Let's look at some ideas for a playbook.
+-->
+
+---
+layout: two-cols-header
+---
+
+## A Pull Request is a Presentation
+
+::left::
+
+### Goal: Get Changes merged by helping the project, not just dumping code
+
+Ex: "Tropical Island" vs "Dinosaur Skull"
+
+> "You must mention the dinosaur skull to build maintainer trust."
+
+::right::
+
+![Alya Abbott at FOSDEM 2026](/images/slides/dino-under-water.jpg)
+
+`<"Pull requests maintainers will love to review", Alya Abbott (Product/GTM/Community at Zulip), FOSDEM 2026 />`
+[source](https://fosdem.org/2026/schedule/event/L7ERNP-prs-maintainers-will-love/)
+
+<!--
+At FOSDEM 2026, Alya Abbott gave a talk about how a pull request is a presentation. It’s not just code; it’s a communication tool. And that means it needs to have the human elements of context, intent, and accountability that open source thrives on. So if you’re going to allow AI-generated contributions, you need to make sure they meet those standards.
+
+If you hide the risks and the maintainer finds them, they question your competence or honesty. Bots are great at the "Tropical Island" (clean surface) but terrible at the "Dinosaur Skull" (admitting when they're guessing or where the code is fragile).
+-->
+
+---
+layout: two-cols-header
+---
+
+## A Pull Request is a Presentation
+
+::left::
+
+### Commit Discipline as a Human Defense
+
+- Use commit structure for storytelling
+- Self-review guidelines and checklists
+- Use PR descriptions to flag points of uncertainty
+- Effectively demonstrating visual changes
+
+::right::
+
+![Alya Abbott at FOSDEM 2026](/images/slides/commit-discipline.jpg)
+
+`<"Pull requests maintainers will love to review", Alya Abbott (Product/GTM/Community at Zulip), FOSDEM 2026 />`
+[source](https://fosdem.org/2026/schedule/event/L7ERNP-prs-maintainers-will-love/)
+
+<!--
+Alya posited that commits should tell the story of your changes, and each commit is one safe, deployable change. In addition, commits should show a separation of concerns, with rafactoring, functional changes, and visual changes should each be separate commits. When a contributor (or a bot) dumps a massive 13,000-line PR like the OCaml incident, it's impossible to review.
+
+By demanding the type of commit discipline that Alya advocates for, you create a "Proof of Toil". If a bot can't explain the why in a clean sequence, it shouldn't be in your repo.
+-->
+
+---
+layout: image
+image: /images/slides/agents-md.jpg
+backgroundSize: 60%
+---
+
+## Contribution Guidelines for AI-Generated Contributions
+### Step One: `AGENTS.md`
+
+- Compatible with all major AI coding agents and tools
+- Add sections for project overview, building & testing, code style, etc.
+
+<span style="position: absolute; bottom: 10%;">
+
+[Github Examples](https://github.com/search?q=path%3AAGENTS.md+NOT+is%3Afork+NOT+is%3Aarchived&type=code)
+
+[source: agents.md](https://agents.md/)
+
+</span>
+
+<!--
+How many of you have heard of an AGENTS.md file? It's a new type of documentation that some projects are using to set guidelines for AI contributions. It can include things like:
+- A project overview and architecture to help bots understand the context
+- Building and testing instructions to ensure bots can verify their changes
+- Code style and formatting guidelines to maintain consistency
+- A checklist for self-review to encourage bots to catch their own mistakes before submitting
+
+By creating an AGENTS.md file, you can provide a clear framework for how AI tools should interact with your project, and set expectations for the quality and accountability of AI-generated contributions.
 -->
 
 ---
 
+## Contribution Guidelines for AI-Generated Contributions
+### Step Two: `AI-CONTRIBUTING.md`
 
+<v-clicks>
+
+- Rule 1: Humans Own the Work.
+- Rule 2: Accurate Disclosure.
+- Rule 3: Protecting the On-Ramp.
+- Rule 4: Anti-Retaliation.
+- Rule 5: Human Voucher.
+
+</v-clicks>
+
+<!--
+
+How many of you require those who are contributing to your project to adhere to the CONTRIBUTING.md file? And what happens if a contributor doesn't follow those guidelines?
+
+Why not have a separate AI-CONTRIBUTING.md file that specifically addresses the unique challenges of AI-generated contributions? This file could include rules like:
+
+- Rule 1: Humans Own the Work. The human must understand, test, and explain the code.
+- Rule 2: Accurate Disclosure. PR descriptions must be honest, not hallucinated LLM filler.
+- Rule 3: Protecting the On-Ramp. Reserve "Good First Issues" for human learners to preserve the community pipeline.
+- Rule 4: Anti-Retaliation. Rejections are final; autonomous "reputation audits" violate the Code of Conduct.
+- Rule 5: Human Voucher: Require a "human voucher" or a linked discussion before an AI PR is even allowed to be opened.
+
+There are tools that can help enforce these rules, but the key is to set clear expectations and guidelines for AI contributions, so that maintainers can focus on meaningful contributions and not get bogged down in the "slop."
+-->
+
+---
+
+## Conclusion
+### Reclaim the commons
+
+- Open source succeeds because we learn from each other
+- Guidelines aren't just rules - they are filters to protect your sanity
+- Keep the "Open" in Open Source about people, not just robots
 
 <!--
 
 -->
 
 ---
-
-
-
-<!--
-
--->
-
+layout: end
 ---
-
-
-
-<!--
-
--->
-
----
-
-
-
-<!--
-
--->
-
----
-
-
-
-<!--
-
--->
-
----
-
 
 
 <!--
