@@ -493,12 +493,18 @@ There are tools that can help enforce these rules, but the key is to set clear e
 -->
 
 ---
-layout: image
-image: /images/slides/whence-repo.jpg
-backgroundSize: 60%
+layout: two-cols-header
+class: gap-4
 ---
 
 ## Contribution Guidelines for AI-Generated Contributions
+
+::left::
+
+![alt text](/images/slides/whence-repo.jpg){style="margin: auto; padding-top: 100px; width: 100%; border-radius: 15px 50px; "}
+
+
+::right::
 
 ### Optional Step Three: 'WHENCE'
 
@@ -506,6 +512,12 @@ backgroundSize: 60%
 - Every AI session gets a note attached with the prompts, iterations, etc. that led to the change(s)
 
 Review and contribute to the standard at [github.com/zmarkan/whence](https://github.com/zmarkan/whence)
+
+<style>
+.two-cols-header {
+  column-gap: 20px; /* Adjust the gap size as needed */
+}
+</style>
 
 <!--
 A former colleague and friend, Zan Markan, has started putting together an open standard for AI contribution provenance. The idea is for a hook that runs after the session is closed which creates a git note containing all the interactions and prompts to provide necessary context for reviews, etc. Check out the repo to review and contribute to the standard.
