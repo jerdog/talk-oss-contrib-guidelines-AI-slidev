@@ -59,14 +59,41 @@ transition: slide-left
 ## Navigating AI Slop, Adversarial Agents, and the Future of Open Source Contribution
 
 
-
 <!--
 
 -->
 
 ---
 
+## AI's impact on Software Delivery
+
+<br />
+
+<v-clicks>
+
+1. Average throughput jumped 59% across all projects
+2. Up on feature branches, down on main
+3. AI-generated code breaks more often and takes longer to fix
+4. Fewer than 1 in 20 teams have figured out how to ship at AI speed
+
+</v-clicks>
+
+Source: [CircleCI 2026 State of Software Delivery Report](https://circleci.com/blog/five-takeaways-2026-software-delivery-report/)
+
+<!--
+Before we dive into the specific challenges of AI in open source, let's take a look at the broader impact of AI on software delivery as a whole. According to CircleCI's 2026 State of Software Delivery Report, there are some significant trends that we need to be aware of:
+[click]1. The average number of daily workflow runs increased 59% year over year, far and away the biggest throughput increase
+[click]2. Most teams saw a clear increase in activity on feature branches, where AI helps with prototyping and iteration. But throughput on the main branch, where code actually gets promoted to production, declined.Writing code is no longer the constraint. Review, validation, integration, recovery. That’s where AI-generated code is piling up, and it’s quietly draining velocity, morale, and ROI from every AI investment.
+[click]3. AI-generated code breaks more often and takes longer to fix. Main branch success rates dropped to 70.8%, the lowest in over five years and well below CircleCI’s recommended benchmark of 90%. That means nearly 3 out of every 10 attempts to merge into production are failing. Recovery times climbed to over an hour to get back to green. The costs associated with that, especially if you're deploying multiple times a day, are significant. And the impact on team morale and confidence is even greater.
+[click]4. The Top 5% of teams are the exception to every trend - they're writing and shipping more code. But they represent only 1 in 20 teams. The vast majority of teams are still figuring out how to ship at AI speed, and many are struggling to keep up with the influx of AI-generated contributions.
+-->
+
+---
+
 ## Open Source is about more than just code
+
+![alt text](/images/slides/oss_code_ai-agents.jpg)
+
 
 <!--
 We’ve always said that Open Source is about more than just code—it’s about community. But what happens when the “community” starts to include AI agents that can generate code, but lack the human context, intent, and accountability that open source thrives on? This isn’t just a minor annoyance; it poses a direct threat to the sustainability of beloved projects and the maintainers who tirelessly support them.
@@ -75,6 +102,8 @@ We’ve always said that Open Source is about more than just code—it’s about
 ---
 
 ## Challenges of AI in OSS and the need for guidelines
+
+![alt text](/images/slides/need-for-guidelines.jpg)
 
 <!--
 Today, we’re going to look at some of the current challenges facing open source projects and maintainers, and then discuss what a playbook might look like for your specific project using a mix of technical standards and new "rules for robots" to help ensure we embrace these new tools, while still keeping the spirit of open source intact.
@@ -94,6 +123,7 @@ transition: slide-down
   <p style="font-weight: bold;">DevRel & DevEx Professional</p>
   <p class="italic">Coming soon....</p>
   <p style="font-weight: bold;">DevOpsDays KC Organizer</p>
+  <p style="font-weight: bold;">CommunityDays KC Organizer</p>
   <p style="font-weight: bold;">CDF Ambassador</p>
 
 </span>
@@ -141,6 +171,18 @@ class: section
 
 ## Is AI having an impact on open source projects and maintainers?
 
+<v-click>
+
+### Entering AI "Slop"ageddon
+
+![alt text](/images/slides/redmonk-ai-slopaggedon.jpg){style="margin: auto; width: 40%; border-radius: 15px 50px; "}
+
+</v-click>
+
+<!--
+Dr. Kate Holterhoff, an analyst at the developer analyst firm Redmonk, recently wrote an article about the impact of AI on open source projects and maintainers. They have found that while some maintainers are embracing AI as a tool to help with their work, many are struggling with the influx of low-quality, AI-generated contributions that lack the necessary context and understanding of the project. This has led to increased workload and burnout for maintainers, who must sift through these contributions to find any that may be valuable, while also dealing with the noise and potential for misinformation. A number of projects to specifically talk about...
+-->
+
 ---
 layout: image
 image: /images/slides/opencut-ai-blunder.jpg
@@ -156,7 +198,12 @@ backgroundSize: 60%
 - 2314 deletions
 
 <!--
+Example: OpenCut
 
+- *Just* 515 commits
+- 221 file changes
+- 29041 additions
+- 2314 deletions
 -->
 
 ---
@@ -176,7 +223,12 @@ backgroundSize: 60%
 [source](https://github.com/ocaml/ocaml/pull/14369)
 
 <!--
+Example: OCaml
 
+- Developer submits PR to add DWARF debugging support to OCaml
+- Admits using Claude Code and not writing a single line, only "shepherded"
+- Claude used code from a different codebase
+- Developer couldn't explain any of the code, just "I don't know, Claude did it"
 -->
 
 ---
@@ -235,6 +287,8 @@ tldraw put a policy in place that auto-closes all external pull requests.
 
 ## AI is a tool, but it’s also an actor
 
+![alt text](/images/slides/ai-robot-attacks.jpg)
+
 <!--
 We’ve reached a point where AI isn't just a tool; it's an actor that can research our history and attack our reputations when it doesn't get its way.
 -->
@@ -276,7 +330,7 @@ Reviewing unverified code is exhausting. When you spend your precious volunteer 
 
 ## AI in Software Development and Open Source
 
-- Effects of AI use on burnout in 2 camps (Miranda Heath Report, 2025):
+- Effects of AI use on burnout in 2 camps (***Miranda Heath Report***, 2025):
   - AI use has increased maintainer workload due to low-quality slop contributions
   - AI use as a tool can either reduce / increase burnout depending on how it is used
 
@@ -298,7 +352,7 @@ The other camp saw AI in more neutral terms as a tool. Whether this tool makes b
 
 <br />
 
-> ‘We need to reduce the amount of sand in the machine. We must do something to drastically reduce the temptation for users to submit low quality reports. Be it with AI or without AI.’—Daniel Stenberg, curl maintainer, 2025
+> ‘We need to reduce the amount of sand in the machine. We must do something to drastically reduce the temptation for users to submit low quality reports. Be it with AI or without AI.’ <br />—***Daniel Stenberg***, `curl` maintainer, 2025
 
 <!--
 Looking at the arguments on both sides of the debate, it seems there are two things that can be done to prevent AI use exacerbating maintainer burnout. Firstly, by cultivating means of filtering out and refusing poor quality AIgenerated contributions. Secondly, by improving education among contributors and developers on how, and how not, to use AI in collaborative coding, such that it does not prevent developers learning new skills and can change their workflows for the better.
@@ -436,6 +490,25 @@ Why not have a separate AI-CONTRIBUTING.md file that specifically addresses the 
 - Rule 5: Human Voucher: Require a "human voucher" or a linked discussion before an AI PR is even allowed to be opened.
 
 There are tools that can help enforce these rules, but the key is to set clear expectations and guidelines for AI contributions, so that maintainers can focus on meaningful contributions and not get bogged down in the "slop."
+-->
+
+---
+layout: image
+image: /images/slides/whence-repo.jpg
+backgroundSize: 60%
+---
+
+## Contribution Guidelines for AI-Generated Contributions
+
+### Optional Step Three: 'WHENCE'
+
+- Open standard (WIP) for AI contribution provenance
+- Every AI session gets a note attached with the prompts, iterations, etc. that led to the change(s)
+
+Review and contribute to the standard at [github.com/zmarkan/whence](https://github.com/zmarkan/whence)
+
+<!--
+A former colleague and friend, Zan Markan, has started putting together an open standard for AI contribution provenance. The idea is for a hook that runs after the session is closed which creates a git note containing all the interactions and prompts to provide necessary context for reviews, etc. Check out the repo to review and contribute to the standard.
 -->
 
 ---
