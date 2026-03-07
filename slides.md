@@ -165,6 +165,14 @@ General consensus is that AI is here to stay, and will only become more prevalen
 
 </v-clicks>
 
+<!--
+[click] How many of you have seen an AI-generated issue or PR in an open source project?
+[click] How many of you have had to review an AI-generated contribution? Reject?
+[click] How many of you have considered banning AI-generated contributions? Have done it?
+[click] How many of you have considered an AI contribution policy? Have done it?
+[click] How many of you use AI tools in your own development work? Do you disclose it?
+-->
+
 ---
 class: section
 ---
@@ -207,9 +215,9 @@ Example: OpenCut
 -->
 
 ---
-layout: image
-image:
-backgroundSize: 60%
+layout: image-right
+image: /images/slides/dwarf-ocaml.jpg
+backgroundSize: contain
 ---
 
 ## Problem: The Slopageddon Effect
@@ -232,13 +240,15 @@ Example: OCaml
 -->
 
 ---
-layout: default
+layout: image-right
+image: /images/slides/curl-bug-bounty.jpg
+backgroundSize: contain
 ---
 
 ## Problem: The Slopageddon Effect
 ### Example: cURL
 
-- launches bug bounty program in 2019
+- launched bug bounty program in 2019
 - 87 confirmed vulns, over $100k paid out
 - overrun with low-quality, AI-generated hallucinations
 - ends bug bounty Jan 31, 2026 due to "AI slop"
@@ -250,29 +260,42 @@ cURL maintainer Daniel Stenberg has been vocal about the issue of AI-generated c
 -->
 
 ---
-layout: image
+layout: image-right
 image: /images/slides/ghostty-ai-usage-policy.jpg
-backgroundSize: 45%
+backgroundSize: contain
 ---
 
 ## Problem: The Slopageddon Effect
 ### Example: `ghostty`
 
+> ***The rise of agentic programming has eliminated the natural effort-based backpressure that previously limited low-effort contributions. It is now too easy to create large amounts of bad content with minimal effort.*** <br />
+> -Mitchell Hashimoto
+
+<br />
+
+> ***This is not an anti-AI stance. This is an anti-idiot stance. Ghostty is written with plenty of AI assistance and many of our maintainers use AI daily. We just want quality contributions, regardless of how they are made.***
 
 [source](https://github.com/ghostty-org/ghostty/pull/10412)
 
 <!--
-Mitchell Hashimoto’s Ghostty implemented a zero-tolerance policy where submitting bad AI-generated code gets you permanently banned.
+Mitchell Hashimoto’s Ghostty implemented a zero-tolerance policy where submitting bad AI-generated code gets you permanently banned. He stated:
+
+***The rise of agentic programming has eliminated the natural effort-based backpressure that previously limited low-effort contributions. It is now too easy to create large amounts of bad content with minimal effort.***
+
+He also went on to clarify that this is not an anti-AI stance, but an anti-idiot stance. Ghostty is written with plenty of AI assistance and many of their maintainers use AI daily. They just want quality contributions, regardless of how they are made.
 -->
 
 ---
-layout: image
+layout: image-right
 image: /images/slides/tldraw-no-ai.jpg
-backgroundSize: 40%
+backgroundSize: contain
 ---
 
 ## Problem: The Slopageddon Effect
 ### Example: `tldraw`
+
+> ***For the good of the project, we're going to begin automatically closing pull requests from external contributors. We will of course continue to welcome issues, bug reports, and discussions. This is a temporary policy until GitHub provides better tools for managing contributions.*** <br />
+
 
 [source](https://tldraw.dev/blog/stay-away-from-my-trash)
 
@@ -324,6 +347,14 @@ We are now in the early days of human-AI interaction where AI can attempt to bul
 
 <!--
 Reviewing unverified code is exhausting. When you spend your precious volunteer time on a false report generated in seconds by an LLM, you are on the fast track to burnout.
+
+- 73% of developers have experienced burnout (***[JetBrains](https://www.jetbrains.com/lp/devecosystem-2023)***, 2023)
+- 60% of maintainers have considered quitting due to burnout (***[Tidelift](https://doi.org/110.1109/MS.2024.3404361)***, 2024)
+- Recent research (***[Miranda Heath Report](https://mirandaheath.website/static/oss_burnout_report_mh_25.pdf)***, 2025) suggests that OSS developers are experiencing:
+  - loss of joy in coding
+  - shift of love for OSS to anger, rudeness, frustration towards users and contributors
+  - feelings of guilt, low self-worth, depression
+  - sense of directionlessness, loss of meaning in their work
 -->
 
 ---
