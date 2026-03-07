@@ -60,7 +60,7 @@ transition: slide-left
 
 
 <!--
-
+***RESET TIMER***
 -->
 
 ---
