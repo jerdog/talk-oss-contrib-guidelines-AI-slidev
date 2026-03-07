@@ -11,11 +11,11 @@ info: |
 
   The time to address AI in your CONTRIBUTING.md file is now. But what does that look like? How do we establish clear ground rules for AI-driven contributions (because not all are bad)? How do we define what a “meaningful contribution” is in today’s landscape, and how do we enforce the guidelines? This talk will put forward some thoughts and ideas for what a playbook might look like for your specific project, and some guidelines which can help ensure we embrace these new tools, while still keeping the spirit of open source intact.
 author: "Jeremy Meiss"
-conference: ""
+conference: "SCaLE 23x / Open Source AI Track"
 socialimg: /images/bluesky-jerdog-white.png
 presenter: true
 download: false
-exportFilename: -slidevExport
+exportFilename: "OSS-Contributor-Guidelines-for-Robots-slidevExport"
 export:
   format: pdf
   timeout: 30000
